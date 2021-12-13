@@ -14,14 +14,14 @@
             <input name="estado" type="text" class="" placeholder="Estado" >
         </div>
     </div>
-    <br>
    
     <br>
     <input type="submit" value="Cadastrar" name="cad">
     <a href="index.php"> Voltar </a>  
+    <br><br><br>
     <p>Se o estado já estiver cadastrado, clique em PROXIMO </p>
-    <br>
     <a href="cadastroCity.php"> Proximo </a>
+    
     </form>
 
     <br>
