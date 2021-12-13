@@ -34,7 +34,7 @@
 
     <br><br>
     <input type="submit" value="Cadastrar" name="cad">
-    <a href="index.php"> Voltar </a>
+    <a href="cadastroUF.php"> Voltar </a>
     </form>
 </body>
 </html>
