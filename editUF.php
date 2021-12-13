@@ -18,14 +18,14 @@
         
     ?>
     <h3>Atualização de estado </h3>
-    <form action="cadastro_script.php" method="POST">
+    <form action="edit_uf_script.php" method="POST">
     <div class="">
         <div class="">
             <input name="estado" type="text" class="" value = "<?php echo $linha['estado']; ?>" >
         </div>
     </div>
     <br>
-   
+    <input type="hidden" name="id" value="<?php echo $linha['id_estado'] ?>">
     <input type="submit" value="Atualizar" name="cad">
     <a href="cadastroUF.php"> Voltar </a>  
     </form>
