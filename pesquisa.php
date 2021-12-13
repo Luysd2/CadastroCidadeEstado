@@ -35,9 +35,9 @@
 
                 echo "<ol>
                         
-                        <li>$estado</li>
-                        <li>$cidade</li>
-                        <li><a href='cadastro_edit.php?id=$cod_id'>Editar</a>  <a href='excluir.php?id=$cod_id'>Excluir</a> </li>
+                        <li>Estado: $estado</li>
+                        <li>Cidade: $cidade</li>
+                        <a href='cadastro_edit.php?id=$cod_id'>Editar</a>  <a href='excluir.php?id=$cod_id'>Excluir</a>
                     </ol>";
                     echo "<hr>";
             }
