@@ -19,7 +19,7 @@
     <br>
     <input type="submit" value="Cadastrar" name="cad">
     <a href="index.php"> Voltar </a>  
-    <p>Em caso de estado já cadastrado, vá para a proxima pagina</p>
+    <p>Pesquise pelo estado, se ele for encontrado, clique em PROXIMO</p>
     <br>
     <a href="cadastroCity.php"> Proximo </a>
     </form>
@@ -27,36 +27,29 @@
     <br>
     <br>
 
-    <form action="cadastroUF.php">
+    <tbody>
     <?php
     $pesquisa = $_POST['pesquisa'] ?? '';
     include "conexao.php";
 
-    $sql = "SELECT * FROM tb_estado WHERE estado LIKE '%$pesquisa%'";
+    $sql = "SELECT * FROM tb_estado ";
     $dados = mysqli_query($conn , $sql);
 
-    ?>
-
-    <input type="search" name="pesquisa" placeholder="Pesquisar estado" autofocus>
-    <input type="submit">
-
-    <tbody>
-        <?php
             while($linha = mysqli_fetch_assoc($dados)){
                 $cod_id = $linha['id_estado'];
                 $estado = $linha['estado'];
-               
-                
 
                 echo "<ol>
+                        <li>$cod_id</li>
                         <li>$estado</li>
-                        <a href='cadastro_edit.php?id=$cod_id'>Editar</a>  <a href='excluir.php?id=$cod_id'>Excluir</a> 
+                        <a href='cadastro_edit.php?id=$cod_id'>Editar</a>  <a href='excluirUF.php?id=$cod_id'>Excluir</a> 
                     </ol>";
+                    echo "<hr>";
             }
 
             
             ?>
     </tbody>
-    </form>
+    
 </body>
 </html>
