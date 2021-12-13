@@ -29,7 +29,6 @@
 
     <tbody>
     <?php
-    $pesquisa = $_POST['pesquisa'] ?? '';
     include "conexao.php";
 
     $sql = "SELECT * FROM tb_estado ";
@@ -42,7 +41,7 @@
                 echo "<ol>
                         <li>$cod_id</li>
                         <li>$estado</li>
-                        <a href='cadastro_edit.php?id=$cod_id'>Editar</a>  <a href='excluirUF.php?id=$cod_id'>Excluir</a> 
+                        <a href='editUF.php?id=$cod_id'>Editar</a>  <a href='excluirUF.php?id=$cod_id'>Excluir</a> 
                     </ol>";
                     echo "<hr>";
             }
