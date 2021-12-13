@@ -19,12 +19,11 @@
     <br>
     <input type="submit" value="Cadastrar" name="cad">
     <a href="index.php"> Voltar </a>  
-    <p>Pesquise pelo estado, se ele for encontrado, clique em PROXIMO</p>
+    <p>Se o estado já estiver cadastrado, clique em PROXIMO </p>
     <br>
     <a href="cadastroCity.php"> Proximo </a>
     </form>
 
-    <br>
     <br>
 
     <tbody>
