@@ -15,9 +15,6 @@
         $dados = mysqli_query($conn, $sql);
         $linha = mysqli_fetch_assoc($dados);
 
-        echo $linha['c_estado'];
-        echo "<br>";
-        echo $linha['cidade'];
         
     ?>
     <h3>Tela de atualização </h3>
