@@ -32,7 +32,6 @@
                 $cod_id = $linha['id_cidade'];
                 $estado = $linha['c_estado'];
                 $cidade = $linha['cidade'];
-                
 
                 echo "<ol>
                         
@@ -40,9 +39,9 @@
                         <li>$cidade</li>
                         <li><a href='cadastro_edit.php?id=$cod_id'>Editar</a>  <a href='excluir.php?id=$cod_id'>Excluir</a> </li>
                     </ol>";
+                    echo "<hr>";
             }
 
-            
             ?>
         </tbody>
     </form>
