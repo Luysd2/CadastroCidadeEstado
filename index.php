@@ -13,13 +13,13 @@
     <?php
     include "conexao.php";
     
-    
-    $sql = "SELECT count(cidade) FROM tb_cidade";
+    // Tabela tb_cidade
+    //$sql = "SELECT count(cidade) FROM tb_cidade";
+    $sql = "SELECT count(*) as total FROM tb_cidade";
     $row = mysqli_query($conn, $sql);
-
-   $x = mysqli_num_rows($row);
-
-    echo "Quantidade de cidades é: " . $x;
+    $x = mysqli_fetch_assoc($row);
+    //var_dump($x);die;
+    echo "Quantidade de cidades é: " . $x['total'];
     
     ?>
 
