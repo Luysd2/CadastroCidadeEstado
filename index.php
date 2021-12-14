@@ -12,27 +12,17 @@
 
     <?php
     include "conexao.php";
-    /*
-    $sql ="SELECT count(cidade) FROM cidadeestado";
-    $d = mysqli_query($conn, $sql);
-    //$x = mysqli_fetch_array($d);
-    var_dump($x);
-    echo "<br>";
-    print_r($x);
-    echo "<br>";
-    //echo mysqli_result($d);
+    
+    
+    $sql = "SELECT count(cidade) FROM tb_cidade";
+    $row = mysqli_query($conn, $sql);
 
-    //mysqli_num_rows()
-*/
-    $sql = "SELECT count(cidade) FROM cidadeestado";
-    $result = mysqli_query($conn, $sql);
+   $x = mysqli_num_rows($row);
 
-   // $linhas = mysqli_num_rows($result);
-    //echo "Quantidade de cidades é: " . $linhas;
-   // echo "<br>";
-   // printf("Quantidade de cidades é: " . $linhas);
-
+    echo "Quantidade de cidades é: " . $x;
+    
     ?>
+
 <br><br><br>
     <a href="cadastroUF.php">Cadastrar</a>
     <br><br>
