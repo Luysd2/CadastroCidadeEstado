@@ -8,10 +8,17 @@
 </head>
 <body>
     <h3>tela inicial</h3>
-    <p>Aqui neste tela vc pode cadastrar o estado e cidade</p>
 
     <?php
     include "conexao.php";
+
+     // Tabela tb_estado
+    $query = "SELECT count(*) as x FROM tb_estado";
+    $linha = mysqli_query($conn, $query);
+    $d = mysqli_fetch_assoc($linha);
+    echo "Quantidade de estados cadastrado é: " . $d['x'];
+    
+    echo "<br>";
     
     // Tabela tb_cidade
     //$sql = "SELECT count(cidade) FROM tb_cidade";
@@ -19,7 +26,8 @@
     $row = mysqli_query($conn, $sql);
     $x = mysqli_fetch_assoc($row);
     //var_dump($x);die;
-    echo "Quantidade de cidades é: " . $x['total'];
+    echo "Quantidade de cidades cadastradas é: " . $x['total'];
+
     
     ?>
 
